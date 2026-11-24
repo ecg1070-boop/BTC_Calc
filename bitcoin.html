@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTC Denomination Converter</title>
+<link rel="stylesheet" href="style.css">
+<script src="bitcoin.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="index.html">Crypto Unit Calculators</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="bitcoin.html" aria-current="page">Bitcoin</a>
+    <a href="ethereum.html">Ethereum</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" aria-labelledby="title">
+    <div class="hero-copy">
+      <p class="eyebrow">BITCOIN DENOMINATIONS</p>
+      <h1 id="title">BTC Denomination<br class="desktop-break"> Converter</h1>
+      <p class="intro">Enter an amount in any unit to see its equivalent in every other unit.</p>
+    </div>
+    <section class="converter" aria-labelledby="convert-title">
+      <h2 id="convert-title">Convert an amount</h2>
+      <div class="input-row">
+        <label>Amount
+          <input id="amount" type="text" inputmode="decimal" value="100,000,000" maxlength="100" autocomplete="off" aria-describedby="error">
+        </label>
+        <label>Input unit
+          <select id="unit"></select>
+        </label>
+      </div>
+      <p id="error" class="error" role="status"></p>
+    </section>
+  </section>
+  <section class="results results-wide" aria-labelledby="results-title">
+    <div class="results-heading">
+      <h2 id="results-title">Conversion results</h2>
+      <span class="count">11 entries</span>
+    </div>
+    <table aria-labelledby="results-title">
+      <thead><tr><th scope="col">Unit</th><th scope="col">Converted amount</th></tr></thead>
+      <tbody id="results"></tbody>
+    </table>
+    <p class="note">Algorithmic max is a supply reference, not a denomination. Its result is the entered amount divided by the maximum supply. The ≈ symbol marks a rounded result.</p>
+  </section>
+</main>
+</body>
+</html>
